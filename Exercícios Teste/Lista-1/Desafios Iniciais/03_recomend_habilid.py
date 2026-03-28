@@ -7,15 +7,12 @@ def formatar_lista(lista):
     return ", ".join(lista[:-1])+" e "+ lista[-1]
 
 def main():
-    main()
-
-if __name__ == "__main__":
     hab_user = []
     hab_vaga = []
     hab_tem = []
     hab_falta = []
     
-    print("")
+    print()
     
     while (True):    
         hab = input(f"Digite uma habilidade sua: (-1 para sair) ")
@@ -24,7 +21,7 @@ if __name__ == "__main__":
         else:
             hab_user.append(hab)
     
-    print("")
+    print()
     
     while (True):
         hab = input(f"Digite uma habilidade exigida na vaga: (-1 para sair) ")
@@ -33,7 +30,7 @@ if __name__ == "__main__":
         else:
             hab_vaga.append(hab)
     
-    print("")
+    print()
     
     for hab in hab_vaga:
         if hab in hab_user:
@@ -44,4 +41,5 @@ if __name__ == "__main__":
     print(f"As habilidades necessárias que você já tem são: {formatar_lista(hab_tem)}")
     print(f"As habilidades exigidas pela vaga que você não tem são: {formatar_lista(hab_falta)}")
 
-        
+if __name__ == "__main__":
+    main()
